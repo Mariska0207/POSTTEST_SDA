@@ -5,7 +5,7 @@ void nilaimin(int arr[], int n){
     int fibonacci[8]={1,1,2,3,5,8,13,21};
     int min = fibonacci[0];
     int index = 0;
-    for(int i=1; i<n; i++){
+    for(int i=1; i <= n ; i++){
         if(fibonacci[i] < min){
             min = fibonacci[i];
             index = i;
@@ -13,7 +13,7 @@ void nilaimin(int arr[], int n){
     }
     cout << "nilai minimum yaitu : " << min << endl;
     cout << "dengan indeks ke : ";
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i <= n; i++){
         if(fibonacci[i] == min){
             cout << i << " " ;
         }
