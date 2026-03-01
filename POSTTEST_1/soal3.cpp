@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void referse(int* arr, int n){
+void reverse(int* arr, int n){
     int temp = 0;
+    int *a = arr;
+    int *b = arr+n-1;
     for(int i=0; i<n/2; i++){
-        temp = arr[i];
-        arr[i] = arr[n-i-1];
-        arr[n-i-1] = temp;
+        temp = *a;
+        *a = *b;
+        *b = temp;
+        a++;
+        b--;
     }
 }
 
@@ -16,13 +20,13 @@ int main(){
     for(int i=0; i<7; i++){
         cout << bilprima[i] << " ";
     }
-    referse(bilprima, 7);
+    reverse(bilprima, 7);
     cout << "\nbilangan prima sesudah : " << endl;  
     for(int i=0; i<7; i++){
         cout << bilprima[i] << " ";
     }
 
-    cout << "\n================================================";
+    cout << "\n================================================" << endl;
     cout << "alamat memori bilangan prima : " << endl;
     cout << "elemen 1 (2) : " << &bilprima[0] << endl;
     cout << "elemen 2 (3): " << &bilprima[1] << endl;
