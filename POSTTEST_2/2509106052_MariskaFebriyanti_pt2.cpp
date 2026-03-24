@@ -116,6 +116,7 @@ void harga(kereta_api* arr, int n){
 
 int main(){
     while (true){
+        system("cls");
         cout << "STASIUN KERETA API" << endl;
         cout << "1.Jadwal\n2.Tambah\n3.Keluar" << endl;
         cout << "Masukkan pilihan :";
