@@ -38,7 +38,7 @@ void tampilkanStokSembako(BarangNode* head) {
         cout << "Gudang kosong" << endl; //jika kosong menampilkan output ini
         return; //keluar dari fungsi
     }
-    BarangNode* temp = head; // Mengecek apakah linked list kosong
+    BarangNode* temp = head; // Membuat pointer sementara untuk traversal
     do{ // kode di jalankan jika syarat(while) terpenuhi
         cout << temp->namaBarang << ": " << temp->stok << endl; // menampilkan nama barang dan stoknya
         temp = temp->next; //pindah ke node berikutnya
